@@ -7,7 +7,7 @@ export async function sendChatMessage(message) {
     }
 
     try {
-        const response = await axios.post('https://chatbot-backend-x27w.onrender.com/chat', { message: text })
+        const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/chat`, { message: text })
         const data = response.data
         if (!data?.reply) {
             throw new Error('No reply returned from backend')
