@@ -5,7 +5,6 @@ export async function sendChatMessage(message) {
     if (!text) {
         throw new Error('Message cannot be empty')
     }
-
     try {
         const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/chat`, { message: text })
         const data = response.data

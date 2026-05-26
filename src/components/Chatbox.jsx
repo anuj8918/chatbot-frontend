@@ -45,10 +45,10 @@ const Chatbox = () => {
                         const isUser = message.role === 'user'
                         return (
                             <div key={index} className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
-                                <div className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-6 shadow-lg 
-                                ${isUser
-                                        ? 'bg-[#1f1f1f] text-white border border-white/10'
-                                        : 'bg-[#111111] text-white border border-white/10'
+                                <div className={`max-w-[85%] px-3 py-2 text-sm leading-5 shadow-lg border border-white/10
+                                    ${isUser
+                                        ? 'bg-[#1f1f1f] text-white rounded-2xl rounded-br-md'
+                                        : 'bg-[#111111] text-white rounded-2xl rounded-bl-md'
                                     }`}
                                 >
                                     {message.text}
@@ -67,7 +67,7 @@ const Chatbox = () => {
             </div>
             {/* Bottom Input */}
             <div className="sticky bottom-0 bg-[#020202] pb-6 pt-4">
-                <form onSubmit={handleSubmit} className="mx-auto flex max-w-3xl items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 shadow-lg">
+                <form onSubmit={handleSubmit} className="mx-auto flex max-w-3xl items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-3 py-2 shadow-lg">
                     <button type="button" className="flex h-9 w-9 items-center justify-center rounded-full text-white/70 transition hover:bg-white/10">
                         <Plus size={18} />
                     </button>
